@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Computer Science Blog</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <style>
+          .checked {
+            color: orange;
+          }
+
+          .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 70%;
+            background-color: white;
+            margin-left: 5%;
+            padding: 2% 2% 2% 2%;
+          }
+
+          .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+          }
+
+          .container {
+            padding: 2px 16px;
+          }
+
+          .rating {
+            display: inline-block;
+            position: relative;
+            height: 50px;
+            line-height: 50px;
+            font-size: 50px;
+          }
+
+          .rating label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            cursor: pointer;
+          }
+
+          .rating label:last-child {
+            position: static;
+          }
+
+          .rating label:nth-child(1) {
+            z-index: 5;
+          }
+
+          .rating label:nth-child(2) {
+            z-index: 4;
+          }
+
+          .rating label:nth-child(3) {
+            z-index: 3;
+          }
+
+          .rating label:nth-child(4) {
+            z-index: 2;
+          }
+
+          .rating label:nth-child(5) {
+            z-index: 1;
+          }
+
+          .rating label input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+          }
+
+          .rating label .icon {
+            float: left;
+            color: transparent;
+          }
+
+          .rating label:last-child .icon {
+            color: #000;
+          }
+
+          .rating:not(:hover) label input:checked ~ .icon,
+          .rating:hover label:hover input ~ .icon {
+            color: #09f;
+          }
+
+          .rating label input:focus:not(:checked) ~ .icon:last-child {
+            color: #000;
+            text-shadow: 0 0 5px #09f;
+          }
+
+    </style>
+  </head>
+  <body>
+    <ul class="navclass">
+      <li class="liclass"><a class="active" href="index.html">Home</a></li>
+      <!-- <li class="liclass"><a href="login.html">Login</a></li>
+      <li class="liclass"><a href="signup.html">Sign UP</a></li> -->
+      <li class="liclass"><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+    <div>
+      <br><br>
+      <div style="display: grid;grid-template-columns: 2fr 2fr;">
+        <div class="card">
+          <img src="pieces.jpeg" alt="Avatar" style="width:100%">
+          <div class="container">
+            <h2><b>Bits and Pieces</b></h2> 
+            <h4>Gordon McKay, professor of computer science in Harvard’s School of Engineering</h4> 
+            <p>He writes about computer science.</p>
+            <a href="https://harry-lewis.blogspot.com/">Read More</a>
+          </div>
+          
+        </div>
+
+        <div class="card">
+          <form action="">
+            <h3>Stars:</h3>
+            <div class="rating">
+              
+              <label>
+                <input type="radio" name="stars" value="1" />
+                <span class="icon">★</span>
+              </label>
+              <label>
+                <input type="radio" name="stars" value="2" />
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+              </label>
+              <label>
+                <input type="radio" name="stars" value="3" />
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="icon">★</span>   
+              </label>
+              <label>
+                <input type="radio" name="stars" value="4" />
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+              </label>
+              <label>
+                <input type="radio" name="stars" value="5" />
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+              </label>
+            </div>
+         
+            <br>
+            <label for="comment">
+              <h3>Comments:</h3>
+              <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Write Your Comments"></textarea>
+            </label>
+            <br><br>
+            <button type="button">Submit</button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+     
+    </div>
+    
+  </body>
+</html>
